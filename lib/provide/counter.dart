@@ -9,8 +9,8 @@ import 'package:flutter/material.dart';
 class Counter  with ChangeNotifier{
   int value = 0;
 
-  increment(){
-    value++;
+  increment(int index){
+    value = index;
     notifyListeners();
   }
 }

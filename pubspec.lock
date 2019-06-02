@@ -63,7 +63,7 @@ packages:
       name: dio
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "2.1.0"
+    version: "2.1.5"
   fluro:
     dependency: "direct main"
     description:
@@ -186,6 +186,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.0.0"
+  shared_preferences:
+    dependency: "direct main"
+    description:
+      name: shared_preferences
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.5.2+1"
   sky_engine:
     dependency: transitive
     description: flutter
@@ -197,7 +204,7 @@ packages:
       name: source_span
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "1.5.3"
+    version: "1.5.4"
   stack_trace:
     dependency: transitive
     description:

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_shop/pages/details_page/details_bottom.dart';
 import 'package:flutter_shop/pages/details_page/details_explain.dart';
 import 'package:flutter_shop/pages/details_page/details_tabbar.dart';
 import 'package:flutter_shop/pages/details_page/details_top_area.dart';
@@ -27,15 +28,24 @@ class DetailPage extends StatelessWidget {
         future: _getBackInfo(context),
         builder: (context,snap){
           if(snap.hasData){
-            return Container(
-              child: ListView(
-                children: <Widget>[
-                  DetailsTopArea(),
-                  DetailsExplain(),
-                  DetailsTabbar(),
-                  DetailWeb(),
-                ],
-              ),
+            return  Stack(
+              children: <Widget>[
+                  Container(
+                      child: ListView(
+                        children: <Widget>[
+                          DetailsTopArea(),
+                          DetailsExplain(),
+                          DetailsTabbar(),
+                          DetailWeb(),
+                        ],
+                      ),
+                ),
+                Positioned(
+                  bottom: 0,
+                  left: 0,
+                  child: DetailsBottom(),
+                )
+              ],
             );
           }else{
             return Text("加载...");
